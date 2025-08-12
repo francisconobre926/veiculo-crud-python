@@ -1,5 +1,5 @@
 import os
-from CarroService import CarroService
+from carroService import CarroService
 from Motorista import Motorista
 from Carro import Carro
 from motoristaService import MotoristaService
@@ -18,14 +18,15 @@ def limpar_tela():
 def processarEscolha(escolha):
         match escolha:
             case "1":
-
                 servico.adicionarCarro()    
             case "2":
                 servico.listarCarros()
             case "3":
-                servico.removerCarro()  
+                id=int(input("Digite o ID do carro a remover: "))
+                servico.removerCarro(id)  
             case "4":
-                print("Saindo do sistema. Até logo!") 
+                print("Saindo do sistema...!")
+                exit() 
             case _:
                 print("Opção inválida. Tente novamente.")
 
@@ -38,14 +39,15 @@ def telaInicial():
     escolha = input("Escolha uma opção: ")
     processarEscolha(escolha)
 
+
               
 
 def menu():
     while True:
         telaInicial()
-        continuar = input("Deseja continuar? (s/n): ")
+        continuar = input("Deseja continuar? (1.sim/2.nao): ")
         limpar_tela()
-        if continuar.lower() != 's':
+        if continuar.lower() != '1':
             print("Saindo do sistema. Até logo!")
             break
 
@@ -53,4 +55,4 @@ def menu():
 
     
                             
-menu()                                
+                             

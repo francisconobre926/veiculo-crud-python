@@ -1,7 +1,8 @@
 class Carro:
-    
+    id=0
     def __init__(self, anoDeFabrico, modelo,marca, cor, motorista):
-        self.id=+1  # Simplesmente incrementa o ID para cada novo carro
+        Carro.id += 1
+        self.id =Carro.id 
         self.anoDeFabrico=anoDeFabrico
         self.modelo=modelo
         self.marca=marca

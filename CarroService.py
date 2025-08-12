@@ -15,11 +15,14 @@ class CarroService:
             print(carro.mostrarDetalhes())
             print("-" * 90)
 
+        else:
+            print("Nenhum carro cadastrado.")
 
     def removerCarro(self,id):
         for carro in self.carros:
             if carro.id==id:
                 self.carros.remove(carro)
                 return carro
-        return f"o carro pretendido nao existe"    
+        else:
+            print("o carro pretendido nao existe")    
     
