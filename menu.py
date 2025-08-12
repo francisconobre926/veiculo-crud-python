@@ -56,7 +56,7 @@ def telaInicial():
 def menu():
     while True:
         telaInicial()
-        continuar = input("Deseja continuar? (1.sim/2.nao): ")
+        continuar = input("Deseja continuar? \n1.sim\n2.nao\n")
         limpar_tela()
         if continuar.lower() != '1':
             print("Saindo do sistema. Até logo!")

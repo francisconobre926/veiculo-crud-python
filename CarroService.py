@@ -6,8 +6,8 @@ class CarroService:
         self.carros = []
 
 
-    def adicionarCarro(self):
-        carro = carroFactory()
+    def adicionarCarro(self,carro):
+        
         self.carros.append(carro)
     
 
