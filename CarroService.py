@@ -9,6 +9,8 @@ class CarroService:
     def adicionarCarro(self):
         carro = carroFactory()
         self.carros.append(carro)
+    
+
 
     def listarCarros(self):
         for carro in self.carros:
@@ -26,3 +28,11 @@ class CarroService:
         else:
             print("o carro pretendido nao existe")    
     
+    def actualizarMotorista(self, id, novos_dados):
+        for carro in self.carros:
+            if carro.id==id:
+                for chave, valor in novos_dados.items():
+                    setattr(carro, chave, valor)
+                print("carro com {id} actualizado!") 
+            else: 
+                print("carro nao encontrado!")       
